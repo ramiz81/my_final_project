@@ -7,7 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container" >
   <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>.
    <%= link_to 'Edit profile', edit_user_registration_path %> |
@@ -18,6 +17,7 @@
  <% end %>
    <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
+  <div class="container" >
 
 <%= yield %>
 </div>
